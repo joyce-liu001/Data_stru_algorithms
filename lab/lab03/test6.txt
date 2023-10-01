@@ -1,0 +1,14 @@
+Tree:
+      9
+     /
+    8
+   /
+  7
+ /
+6
+
+#nodes = 4,  #leaves = 1
+Infix  : 6 7 8 9 
+Prefix : 9 8 7 6 
+Postfix: 6 7 8 9 
+ByLevel: 9 8 7 6 

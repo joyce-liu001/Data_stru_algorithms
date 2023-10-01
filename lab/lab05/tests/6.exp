@@ -1,0 +1,19 @@
+Runway Landing Scheduler v1.0
+Enter ? to see the list of commands.
+> + 12 25 1200
+Successfully added Dec 25 12:00 to the schedule!
+> s 1
+Dec 25 12:00
+> 
+Unknown command '
+'
+> + 12 25 1210
+Couldn't add Dec 25 12:10 to the schedule!
+> + 12 25 1150
+Couldn't add Dec 25 11:50 to the schedule!
+> + 12 25 1250
+Successfully added Dec 25 12:50 to the schedule!
+> s 1
+Dec 25 12:00
+Dec 25 12:50
+> 

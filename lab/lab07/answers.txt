@@ -1,0 +1,55 @@
+
+NOTE:
+- Your time complexities should be expressed in big-O notation and be in
+  terms of n, where n is the number of people who  have  been  added  to
+  Friendbook.
+
+===============
+  FbIsFriend
+===============
+
+- Worst case time complexity: O(log n)
+
+- Explanation: In this function, we have two nameToId function, and nameToId 
+function use MapGet which time complexity is O(log n). So this function's time 
+complexity is 2*log n = O(log n).
+
+
+===============
+FbMutualFriends
+===============
+
+- Worst case time complexity: O(n log n)
+
+- Explanation: In this function, we have two FbIsFriend (O(log n))
+and ListAppend O(1) functions in a loop. So this function's time 
+complexity is 2*n log n + O(1) = O(n log n).
+
+===============
+ FbFriendRecs1
+===============
+
+- Worst case time complexity: O(n^3 log n)
+
+- Explanation: In this function, we have FbNumFriends(O(n)),
+nameToId O(log n) and printrecom recursion functions. In printrecom,
+we have one while loop includes FbMutualFriends (O(n log n)), ListSize (O(1)),
+FbIsFriend(O(log n)) and ListFree (O(n)) functions.
+
+So this function's time complexity is O(n)+ O(log n)+ n*n*(O(n log n)+O(1)
++O(log n)+O(n)) = O(n^3 log n );
+
+
+===============
+ FbFriendRecs2
+===============
+
+- Worst case time complexity: O(n^2 log n)
+
+- Explanation: In this function, the most time complexity is in the 
+double nested loops.The first layer cycle we have QueueIsEmpty O(1), 
+QueueDequeue O(1) and FbIsFriend O(log n). In the second layer cycle,
+we have FbIsFriend O(log n) and QueueEnqueue O(1). 
+
+So this function's time complexity is n*(O(1)+O(1)+O(log n))+ n^2 *
+(O(log n) + O(1)) = O(n^2 log n)

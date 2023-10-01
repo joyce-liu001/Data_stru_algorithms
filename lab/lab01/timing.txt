@@ -1,0 +1,34 @@
+Input	Has	Initial	Number	 AvgTime	  AvgTime
+Size	Dups Order	of runs	 forusel	  forsort
+10000	no	random	5	0m0.140sec	0m0.0094sec
+10000	no	sorted	5	0m0.150sec	0m0.0058sec
+10000	no	reverse	5	0m0.0082sec	0m0.0053sec
+10000	yes	random	6	0m0.143sec	0m0.012sec
+10000	yes	sorted	5	0m0.145sec	0m0.013sec
+10000	yes	reverse	5	0m0.012sec	0m0.0073sec
+20000	no	random	5	0m0.647sec	0m0.0084sec
+20000	no	sorted	5	0m0.567sec	0m0.0073sec
+20000	no	reverse	5	0m0.0107sec	0m0.0105sec
+20000	yes	random	4	0m0.616sec	0m0.011sec
+20000	yes	sorted	4	0m0.569sec	0m0.010sec
+20000	yes	reverse	4	0m0.0105sec	0m0.075sec
+40000	no	random	4	0m3.243sec	0m0.020sec
+40000	no	sorted	4	0m2.269sec	0m0.011sec
+40000	no	reverse	4	0m0.0133sec	0m0.015sec
+40000	yes	random	4	0m3.27sec	0m0.018sec
+40000	yes	sorted	4	0m2.23sec	0m0.008sec
+40000	yes	reverse	4	0m0.017sec	0m0.017sec
+...
+
+Explaination: 
+According to the table above, we can find the AvgTime and Input Size is positive 
+correlation. That's because more input numbers will lead to more code loops, 
+that increase time of running the program.
+
+The average time for sort is less than time for useIntList. I guess because the code I write in IntListInsertInOrder function takes longer times for running.
+
+We also noticed that reverse order had less AvgTime than the other two orders.
+In reverse, each number is inserted into the first in the list, it don't need use while loop to find the position (because v always be the smallest vaule), that leads it runs in O(n) time. However, the random order and sorted order all need to use while loop, so they run in O(n^2) time. That's the reason reverse order use less time than others.
+
+
+
